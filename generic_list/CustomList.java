@@ -11,20 +11,12 @@ public class CustomList<E> implements List<E> {
 
     int size;
 
-    /**
-     * Returns the number of elements in this list.
-     *
-     * @return the number of elements in this list
-     */
+    
     @Override
     public int size() {return size;}
 
 
-    /**
-     * Returns <tt>true</tt> if this list contains no elements.
-     *
-     * @return <tt>true</tt> if this list contains no elements
-     */
+   
     @Override
     public boolean isEmpty() {
         return true;
@@ -44,12 +36,7 @@ public class CustomList<E> implements List<E> {
         return false;
     }
 
-    /**
-     * Appends the specified element to the end of this list.
-     *
-     * @param e element to be appended to this list
-     * @return <tt>true</tt> (as specified by {@link Collection#add})
-     */
+    
     @Override
     public boolean add(E e) {
         elementData[size++]=e;
@@ -74,36 +61,23 @@ public class CustomList<E> implements List<E> {
         return false;
     }
 
-    /**
-     * Removes all of the elements from this list. The list will be empty after this
-     * call returns.
-     */
+
     @Override
     public void clear() {
     }
 
-    /**
-     * Returns the element at the specified position in this list.
-     *
-     * @param index index of the element to return
-     * @return the element at the specified position in this list
+    
      * @throws IndexOutOfBoundsException {@inheritDoc}
-     */
+  
     @SuppressWarnings("unchecked")
     @Override
     public E get(int index) {
         return (E) elementData[index];
     }
 
-    /**
-     * Replaces the element at the specified position in this list with the
-     * specified element.
-     *
-     * @param index   index of the element to replace
-     * @param element element to be stored at the specified position
-     * @return the element previously at the specified position
+    
      * @throws IndexOutOfBoundsException {@inheritDoc}
-     */
+    
     public E set(int index, E element) {
         elementData[index]=element;
         return null;
